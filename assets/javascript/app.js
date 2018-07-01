@@ -49,17 +49,11 @@ database.ref().on("child_added", function(snapshot) {
     trainTimeLeft = moment();
 
     var trainTimeConverted = moment(trainTime, "HH:mm").subtract(1, "years");
-    console.log(trainTimeConverted);
     var currentTime = moment(currentTime).format("HH:mm");
-    console.log(currentTime);
     var diffTime = moment().diff(moment(trainTimeConverted), "minutes");
-    console.log(diffTime);
     var trainRemainder = diffTime % trainFrequency;
-    console.log(trainRemainder);
     var timeTill = trainFrequency - trainRemainder;
-    console.log(timeTill);
     var nextTrain = moment().add(timeTill, "minutes");
-    console.log(moment(nextTrain).format("HH:mm"));
 
 
     var tr = $("<tr>");
