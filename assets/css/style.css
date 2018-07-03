@@ -1,4 +1,7 @@
-.jumbotron {
-    font-family: 'Indie Flower', cursive;
+body {
+    background-image: url("../images/traintime2.jpg");
+}
 
+.container {
+    background-color: whitesmoke;
 }
